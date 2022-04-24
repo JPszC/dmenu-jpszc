@@ -1,5 +1,5 @@
 pkgname=dmenu-jpszc
-pkgver=5.1.r22.8695f74
+pkgver=5.1.r2.611125f
 pkgrel=1
 epoch=
 pkgdesc="A build of dmenu patched for centering, borders, grids, numbers, line height, mouse support, fuzzy matching and highlighting."
@@ -38,6 +38,4 @@ package() {
     mkdir -p ${pkgdir}/opt/${pkgname}
     cp -rf * ${pkgdir}/opt/${pkgname}
     make PREFIX=/usr DESTDIR="${pkgdir}" install
-    install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
-    install -Dm644 README.org "${pkgdir}/usr/share/doc/${pkgname}/README.org"
 }
